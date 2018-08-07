@@ -9,6 +9,10 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="public\styles\styles.css">
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Bangers|Bungee+Shade|Orbitron|Russo+One" rel="stylesheet">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
@@ -26,12 +30,14 @@
                     <input></input>
                 </div>
                 <div class="stats">
+                    <div class="strength">
                     <h3>Strength</h3>
                     <div id="counter"></div>
-                    <div class="button_group">
+                    <div class="button_group strbtn">
                         <button id="subtract">-1</button>
                         <button id="reset">Reset</button>
                         <button id="add">+1</button>
+                    </div>
                     </div>
                     <h3>Dexterity</h3>
                     <div id="counter"></div>
@@ -58,7 +64,8 @@
             </div>
         </div>
     </div>
-
+<script src="character.js">
+</script>
 </body>
 
 </html>
