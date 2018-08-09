@@ -2,8 +2,18 @@ var bcrypt = require("bcrypt-nodejs");
 
 module.exports = function (sequelize, DataTypes) {
   var User = sequelize.define("user", {
-    // Giving the Author model a name of type STRING
-    name: {
+
+    firstName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+
+    lastName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+
+    userName: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true
@@ -12,7 +22,17 @@ module.exports = function (sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING,
       allowNull: false
-    }
+    },
+
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: true
+      }
+    },
+
   });
 
     // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
@@ -26,8 +46,8 @@ module.exports = function (sequelize, DataTypes) {
   });
 
   User.associate = function (models) {
-    // Associating Author with Posts
-    // When an Author is deleted, also delete any associated Posts
+    // Associating User with Characters
+    // When a user is deleted, also delete any associated characters
     User.hasMany(models.charecter, {
       onDelete: "cascade"
     });
