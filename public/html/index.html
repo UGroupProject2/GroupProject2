@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="public\styles\styles.css">
+    <link rel="stylesheet" href="..\styles\styles.css">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
 
     <title>Document</title>
@@ -14,14 +14,30 @@
         <div class="title">
             <h1>PROJECT TWO</h1>
         </div>
-        <br>
-        <div class="startgame">
+        <!-- <br> -->
+        <!-- <div class="startgame">
                 <button type="button" class="btn btn-outline-light">START GAME</button>
-        </div>
+        </div> -->
+        <!-- <br>
         <br>
-        <br>
-        <br>
-        <div class="signin">
+        <br> -->
+        <form class="login_form">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Username</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="enter username">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="enter password">
+          </div>
+          <!-- <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div> -->
+          <button type="submit" class="btn btn-primary">LOGIN</button>
+        </form>
+        <!-- <div class="signin">
                 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">LOGIN</button>
                 
                 <div id="id01" class="modal">
@@ -51,39 +67,46 @@
                     </div>
                   </form>
     
-                </div>
+                </div> -->
                 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">NEW USER</button>
                 
                 <div id="id01" class="modal">
                   
                   <form class="modal-content animate" action="/action_page.php">
-                    <div class="imgcontainer">
+                    <!-- <div class="imgcontainer">
                       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                       <img src="img_avatar2.png" alt="Avatar" class="avatar">
-                    </div>
+                    </div> -->
                 
                     <div class="container">
+                        <label for="uname"><b>First Name</b></label>
+                        <input type="text" placeholder="Enter First Name" name="uname" required>
+
+                        <label for="uname"><b>Last Name</b></label>
+                        <input type="text" placeholder="Enter Last Name" name="uname" required>
+
+                        <label for="uname"><b>Email Address</b></label>
+                        <input type="text" placeholder="Enter Email Address" name="uname" required>
+
                       <label for="uname"><b>Username</b></label>
                       <input type="text" placeholder="Enter Username" name="uname" required>
                 
                       <label for="psw"><b>Password</b></label>
                       <input type="password" placeholder="Enter Password" name="psw" required>
                         
-                      <button type="submit">Login</button>
-                      <label>
-                        <input type="checkbox" checked="checked" name="remember"> Remember me
-                      </label>
+                      <button type="submit">Create</button>
                     </div>
                 
-                    <div class="container" style="background-color:#f1f1f1">
+                    <!-- <div class="container" style="background-color:#f1f1f1">
                       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
                       <span class="psw">Forgot <a href="#">password?</a></span>
-                    </div>
+                    </div> -->
                   </form>
     
                 </div>
                 
         </div>
+        
     </container>
     <script>
             // Get the modal
