@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="..\styles\styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Bangers|Bungee+Shade|Orbitron|Russo+One" rel="stylesheet">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="characterform">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class "characterpic">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5HCpTdo90fYDDGe1le6ruzSB0GlaeR8CDGxvoqx1K4RkMZ6UM7A" ;></img>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="character_name">
+                    <h3>Character Name</h3>
+                    <input></input>
+                </div>
+                <div class="experiencepoints">
+                    <h3>Experience Points</h3>
+                    <div id="counterep"></div>
+                </div>
+                <div class="stats">
+                    <div class="strength">
+                    <h3>Strength</h3>
+                    <div id="counter"></div>
+                    <div class="button_group strbtn">
+                        <button id="subtract">-1</button>
+                        <button id="reset">Reset</button>
+                        <button id="add">+1</button>
+                    </div>
+                    </div>
+                    <h3>Dexterity</h3>
+                    <div id="counterdex"></div>
+                    <div class="button_group">
+                        <button id="subtractdex">-1</button>
+                        <button id="resetdex">Reset</button>
+                        <button id="adddex">+1</button>
+                    </div>
+                    <div class="row">
+                    <h3>Wisdom</h3>
+                    <div id="counterwis"></div>
+                    <div class="button_group">
+                        <button id="subtractwis">-1</button>
+                        <button id="resetwis">Reset</button>
+                        <button id="addwis">+1</button>
+                    </div>
+                    <h3>Agility</h3>
+                    <div id="counteragi"></div>
+                    <div class="button_group">
+                        <button id="subtractagi">-1</button>
+                        <button id="resetagi">Reset</button>
+                        <button id="addagi">+1</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button>Create Character</button>
+    </div>
+<script src="../js/character.js">
+</script>
+</body>
+
+</html>
