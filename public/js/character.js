@@ -1,43 +1,64 @@
 $(document).ready(function () {
 
-var counterep = 20;
-var counter = 0;
-var counterdex = 0;
-var counterwis = 0;
-var counteragi = 0;
+  var counter = 0;
+  var counterep = 20;
+  var counter = 0;
+  var counterdex = 0;
+  var counterwis = 0;
+  var counteragi = 0;
+
+  $("#counterep").text(counterep);
+
+  $("#counter").text(counter);
+
+  $("#counterdex").text(counterdex);
+
+  $("#add").click(function () {
+
+
+    if(counterep !== 0){
+      counter = counter + 1;
+      counterep = counterep -1;    
+    }
+    $("#counterep").text(counterep);
+    $("#counter").text(counter);
+  });
+
+  $("#subtract").click(function () {
+
+    if(counter !== 0){
+      counter = counter - 1;
+      counterep = counterep + 1;    
+    }
+    $("#counterep").text(counterep);
+    $("#counter").text(counter);
+  });
+
+  $("#reset").click(function () {
+    counter = 0;
+    $("#counter").text(counter);
+  });
+
 
 console.log(counterep);
 
-$("#counterep").text(counterep);
 
-$("#counter").text(counter);
-
-$("#add").click(function () {
-counter = counter + 1;
-$("#counter").text(counter);
-});
-
-$("#subtract").click(function () {
-counter = counter - 1;
-$("#counter").text(counter);
-});
-
-$("#reset").click(function () {
-counter = 0;
-$("#counter").text(counter);
-});
-
-
-$("#counterdex").text(counterdex);
 
 $("#adddex").click(function () {
-counterdex = counterdex + 1;
+  if(counterep !== 0){
+    counterdex = counterdex + 1;
+    counterep = counterep -1;    
+  }
+  $("#counterep").text(counterep);
 $("#counterdex").text(counterdex);
 });
 
 $("#subtractdex").click(function () {
-counterdex = counterdex - 1;
-$("#counterdex").text(counterdex);
+    if(counterdex !== 0){
+      counterdex = counterdex - 1;
+      counterep = counterep + 1;}
+      $("#counterep").text(counterep);
+      $("#counterdex").text(counterdex);
 });
 
 $("#resetdex").click(function () {
@@ -49,12 +70,19 @@ $("#counterdex").text(counterdex);
 $("#counterwis").text(counterwis);
 
 $("#addwis").click(function () {
-counterwis = counterwis + 1;
+  if(counterep !== 0){
+    counterwis = counterwis + 1;
+    counterep = counterep -1;    
+  }
+  $("#counterep").text(counterep);
 $("#counterwis").text(counterwis);
 });
 
 $("#subtractwis").click(function () {
-counterwis = counterwis - 1;
+    if(counterwis !== 0){
+      counterwis = counterwis - 1;
+      counterep = counterep + 1;}
+      $("#counterep").text(counterep);
 $("#counterwis").text(counterwis);
 });
 
@@ -66,12 +94,19 @@ $("#counterwis").text(counterwis);
 $("#counteragi").text(counteragi);
 
 $("#addagi").click(function () {
-counteragi = counteragi + 1;
+  if(counterep !== 0){
+    counteragi = counteragi + 1;
+    counterep = counterep -1;    
+  }
+  $("#counterep").text(counterep);
 $("#counteragi").text(counteragi);
 });
 
 $("#subtractagi").click(function () {
-counteragi = counteragi - 1;
+    if(counteragi !== 0){
+      counteragi = counteragi - 1;
+      counterep = counterep + 1;}
+      $("#counterep").text(counterep);
 $("#counteragi").text(counteragi);
 });
 
