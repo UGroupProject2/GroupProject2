@@ -1,26 +1,52 @@
 module.exports = function (sequelize, DataTypes) {
   var Character = sequelize.define("Character", {
     // Giving the Author model a name of type STRING
-    name: DataTypes.STRING,
-    race: DataTypes.STRING,
-    class: DataTypes.STRING,
-    gender: DataTypes.STRING,
-    attack: DataTypes.INT,
-    hitPoints: DataTypes.INT,
-    intellagence: DataTypes.INT,
-    dexterity: DataTypes.INT,
-    AP: DataTypes.INT //ability points
+
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+
+    class: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+
+    gender: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+
+    attack: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+
+    dexterity: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+
+    wisdom: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+
+    agility: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    }
   });
 
   Character.associate = function (models) {
     // Associating user with character
     // When an user is deleted, also delete any associatedcharacter
-    Character.belongsTo(models.user, {
+    Character.belongsTo(models.User, {
       foreignKey: {
         allowNull: false
       }
     });
-  };
+  }; 
 
   return Character;
 };
