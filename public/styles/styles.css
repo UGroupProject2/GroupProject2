@@ -26,6 +26,33 @@ body{
 
 }
 
+.body2{
+  text-align: center;
+  background-image: url("../assets/gpback.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+
+}
+
+.body3{
+  text-align: center;
+  background-image: url("../assets/ppback.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+
+}
+
+.body4{
+  text-align: center;
+  background-image: url("../assets/yyback.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+
+}
+
 h1{
   font-family: 'Bungee Shade', cursive;;
   font-size: 75px;
@@ -233,4 +260,31 @@ h3{
   margin-right: 450px;
   margin-left: 450px;
   width: 400px;
+}
+
+#planet{
+  font-size: 25px;
+  text-align: center;
+  }
+
+#planetImages{
+  max-height: 300px;
+  max-width: 300px;
+  width: 250x;
+  height: 250px;
+}
+
+#enemy{
+  align-items: right;
+ 
+}
+
+#center{
+  align-items: center;
+  margin-top: 45px;
+}
+
+#user{
+  align-items: left;
+
 }
