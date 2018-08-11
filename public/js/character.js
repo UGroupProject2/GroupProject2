@@ -7,8 +7,11 @@ $(document).ready(function () {
   var counterwis = 0;
   var counteragi = 0;
 
+  $("#counterep").text(counterep);
 
   $("#counter").text(counter);
+
+  $("#counterdex").text(counterdex);
 
   $("#add").click(function () {
 
@@ -39,11 +42,7 @@ $(document).ready(function () {
 
 console.log(counterep);
 
-$("#counterep").text(counterep);
 
-$("#counter").text(counter);
-
-$("#counterdex").text(counterdex);
 
 $("#adddex").click(function () {
   if(counterep !== 0){
