@@ -5,16 +5,16 @@ module.exports = function(sequelize, DataTypes) {
       race: DataTypes.STRING,
       class: DataTypes.STRING,
       gender: DataTypes.STRING,
-      attack: DataTypes.INT,
-      hitPoints: DataTypes.INT,
-      intellagence: DataTypes.INT,
-      dexterity: DataTypes.INT,  
+      attack: DataTypes.INTEGER,
+      hitPoints: DataTypes.INTEGER,
+      intelligence: DataTypes.INTEGER,
+      dexterity: DataTypes.INTEGER,  
     });
   
     Character.associate = function(models) {
       // Associating Author with Posts
       // When an Author is deleted, also delete any associated Posts
-      Character.belongsTo(models.user, {
+      Character.belongsTo(models.User, {
         foreignKey: {
             allowNull: false
           }
