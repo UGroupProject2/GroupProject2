@@ -10,10 +10,11 @@
 
 body{
   text-align: center;
-  background-image: url(http://fantasyartdesign.com/free-wallpapers/imgs/new/Dreaming-of-Mars.jpg);
+  background-image: url("https://img.getbg.net/upload/full/9/438312_art_gorod_korabli_dym_krasnyj_transport_trushhoby__1680x1050_(www.GetBg.net).jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
+  line-height: 1;
 
 }
 
@@ -72,6 +73,10 @@ button:hover {
   opacity: 0.8;
 }
 
+.colnumber2{
+  margin-top: 19px;
+  padding-right: 170px;
+}
 /* Extra styles for the cancel button */
 .cancelbtn {
   width: auto;
@@ -172,14 +177,15 @@ span.psw {
 character page */
 
 .characterform{
-  background-color:rgba(146, 187, 247, 0.84);
-  margin-top: 100px;
+  background-color: rgba(26, 72, 138, 0.84);
+  margin-top: 30px;
   margin-bottom: 100px;
   margin-left: 100px;
   margin-right: 100px;
   border-style: solid;
   border-width: 5px;
-  border-color: #45367c;
+  border-radius: 10px;
+  border-color: #91e2f1;
 }
 
 .characterpic{
@@ -230,6 +236,7 @@ input {
 h3{
   font-family: 'Russo One', sans-serif;
   font-size: 2.4em;
+  color: antiquewhite;
   text-align: center;
   padding: 10px;
 }
@@ -240,14 +247,17 @@ h3{
   img {
     vertical-align: middle;
     border-style: solid;
-    width: 80%;
+    border-width: 3px;
+    border-color: #f1f7ad;
+    border-radius: 5px;
+    width: 50%;
     margin-left: 50px;
-    margin-top: 50px;
+    margin-top: 40px;
     margin-bottom: 50px;
 }
 
 .character_name, .experiencepoints{
-  padding: 20px;
+  padding: 5px;
 }
 
 #middle{
