@@ -1,10 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var Character = sequelize.define("Character", {
     // Giving the Author model a name of type STRING
-    UserId: {
-      type: DataTypes.UUID,
-      allowNull: false},
-
     name: DataTypes.STRING, 
     class: DataTypes.STRING,
     gender: DataTypes.STRING,

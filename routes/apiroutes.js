@@ -38,7 +38,6 @@ module.exports = function(app) {
     console.log(req.body);
 
     db.Character.create({
-      UserId: 12345,
       name: req.body.name,
       attack: req.body.attack,
       dexterity: req.body.dexterity,
