@@ -8,7 +8,8 @@ module.exports = function(sequelize, DataTypes) {
     health: DataTypes.INTEGER,
     wisdom: DataTypes.INTEGER,
     dexterity: DataTypes.INTEGER,
-    agility: DataTypes.INTEGER
+    agility: DataTypes.INTEGER,
+    /* FOREIGN KEY (id) REFERENCES User(id) */
   });
   
   Character.associate = function(models) {
