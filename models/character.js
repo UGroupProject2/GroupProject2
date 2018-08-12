@@ -1,14 +1,18 @@
 module.exports = function(sequelize, DataTypes) {
   var Character = sequelize.define("Character", {
     // Giving the Author model a name of type STRING
+    UserId: {
+      type: DataTypes.UUID,
+      allowNull: false},
+
     name: DataTypes.STRING, 
-    race: DataTypes.STRING,
     class: DataTypes.STRING,
     gender: DataTypes.STRING,
     attack: DataTypes.INTEGER,
-    hitPoints: DataTypes.INTEGER,
-    intelligence: DataTypes.INTEGER,
-    dexterity: DataTypes.INTEGER,  
+    health: DataTypes.INTEGER,
+    wisdom: DataTypes.INTEGER,
+    dexterity: DataTypes.INTEGER,
+    agility: DataTypes.INTEGER
   });
   
   Character.associate = function(models) {

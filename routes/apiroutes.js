@@ -38,11 +38,13 @@ module.exports = function(app) {
     console.log(req.body);
 
     db.Character.create({
+      UserId: 12345,
       name: req.body.name,
       attack: req.body.attack,
       dexterity: req.body.dexterity,
       agility: req.body.agility,
-      wisdom: req.body.wisdom
+      wisdom: req.body.wisdom,
+      health: req.body.health
     }).then(function() {
       res.redirect(307, "/api/login");
     }).catch(function(err) {
