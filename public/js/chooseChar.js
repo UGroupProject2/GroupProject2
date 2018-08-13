@@ -1,12 +1,14 @@
 $(document).ready(function() {
   var loggedUserID;
-  var chosenChar;
+  var loggedUserName;
     
 
   function getUser(){
     $.get("/api/user_data").then(function(data) {
       console.log(data.id);
       loggedUserID = data.id;
+      loggedUserName = data.name;
+      $("#userName").append(loggedUserName);
       getChars(loggedUserID);
     });
   }
