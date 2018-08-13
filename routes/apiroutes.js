@@ -43,13 +43,28 @@ module.exports = function(app) {
       dexterity: req.body.dexterity,
       agility: req.body.agility,
       wisdom: req.body.wisdom,
-      health: req.body.health
+      health: req.body.health,
+      UserId: req.body.UserId
     }).then(function() {
       res.redirect(307, "/api/login");
     }).catch(function(err) {
       console.log(err);
       res.json(err);
       // res.status(422).json(err.errors[0].message);
+    });
+  });
+
+  app.get("/api/chars", function(req, res) {
+    var user = req.query.user_id; 
+    console.log(user);
+    
+    db.Character.findAll({
+      where: {
+        UserId: user
+      }
+      
+    }).then(function(dbPost) {
+      res.json(dbPost);
     });
   });
 
