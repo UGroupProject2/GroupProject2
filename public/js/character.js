@@ -175,7 +175,6 @@ $(document).ready(function () {
   // When the creat char button is clicked, we validate the email and password are not blank
   $("#characterButton").click(function(event) {
     event.preventDefault();
-    console.log("button clicked");
     
     var charData = {
       name: $("#character_name").val().trim(),

@@ -54,6 +54,20 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/chars", function(req, res) {
+    var user = req.query.user_id; 
+    console.log(user);
+    
+    db.Character.findAll({
+      where: {
+        UserId: user
+      }
+      
+    }).then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
+
 
   // Route for logging user out
   app.get("/logout", function(req, res) {
