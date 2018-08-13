@@ -6,6 +6,7 @@ $(document).ready(function () {
   var counterwis = 0;
   var counteragi = 0;
   var countervit = 0;
+  var loggedUserID;
 
   $("#counterep").text(counterep);
 
@@ -162,10 +163,20 @@ $(document).ready(function () {
   var counteragi = 0;
   var countervit = 0;
 
-  // When the signup button is clicked, we validate the email and password are not blank
+
+  getUser();
+
+  function getUser(){
+    $.get("/api/user_data").then(function(data) {
+      console.log(data.id);
+      loggedUserID = data.id;
+    });
+  }
+  // When the creat char button is clicked, we validate the email and password are not blank
   $("#characterButton").click(function(event) {
     event.preventDefault();
     console.log("button clicked");
+    
     var charData = {
       name: $("#character_name").val().trim(),
       attack: counter,
@@ -188,21 +199,24 @@ $(document).ready(function () {
       return;
     }
     
+    
+
     createCharacter(charData.name, charData.attack, charData.dexterity, 
-      charData.agility, charData.wisdom, charData.HP );
-    nameInput.val("");
+      charData.agility, charData.wisdom, charData.HP, loggedUserID );
+    $("#character_name").val("");
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
-  function createCharacter(name, attack, dexterity, agility, wisdom, HP) {
+  function createCharacter(name, attack, dexterity, agility, wisdom, HP, UserId) {
     $.post("/api/newChar", {
       name: name,
       attack: attack,
       dexterity: dexterity,
       agility: agility,
       wisdom: wisdom,
-      health: HP
+      health: HP,
+      UserId: UserId
     }).then(function(data) {
       window.location.replace(data);
       // If there's an error, handle it by throwing up a bootstrap alert
