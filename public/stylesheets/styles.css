@@ -38,10 +38,10 @@ h1{
   margin-left: 500px;
   border-style: solid;
   border-width: 5px;
-  border-color: #ff0089;
+  border-color: #ff002b9e;
   border-radius: 10px;
   padding: 35px;
-  background-color: #f8f8ffb8;
+  background-color: #38386785;
 }
 
 /* Full-width input fields */
@@ -57,10 +57,10 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-  background-color: rgba(218, 218, 218, 0.664);
+  background-color: rgba(126, 255, 242, 0.52);
   border-width: 1.5px;
-  border-radius: 0px;
-  border-color: #3220b1;
+  border-radius: 4px;
+  border-color: #ffffff;
   border-style: solid;
   color: white;
   padding: 14px 20px;
@@ -176,6 +176,11 @@ span.psw {
 /*
 character page */
 
+#characterButton{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
 .characterform{
   background-color:rgba(17, 45, 85, 0.84);;
   margin-top: 30px;
@@ -205,6 +210,10 @@ character page */
   
 }
 
+#character_name{
+  border: none;
+}
+
 input {
     font-size: 2em;
     color: rgb(0, 0, 0);
@@ -212,7 +221,7 @@ input {
     display: inline-block;
     width: 100%;
     display: block;
-    background: rgba(227, 227, 227, 0.4);
+    background: rgba(227, 227, 227, 0.8);
     padding: .15em 0;
 }
 
@@ -228,7 +237,7 @@ input {
 .labeltext{
   font-family: roboto;
   font-weight: 400;
-  color: black;
+  color: #fbfbfb;
   font-size: 26px;
   line-height: 40px;
 }
@@ -267,4 +276,31 @@ h3{
   margin-right: 450px;
   margin-left: 450px;
   width: 400px;
+}
+
+.mainMenu{
+  padding-top: 30px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-bottom: 15px;
+  display: inline-grid;
+  align-content: center;
+  border-style: solid;
+  border-width: 5px;
+  border-color: teal;
+  border-radius: 10px;
+  background-color: rgba(17, 45, 85, 0.84);
+  margin-top: 30px;
+}
+
+.mainMenuButtons{
+  padding: 1.0rem 3rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+  color: #ffffff;
+  background-color: transparent;
+  background-image: none;
+  border-color: #ffffff;
+  
 }
