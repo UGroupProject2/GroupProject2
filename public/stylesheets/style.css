@@ -9,11 +9,84 @@ h1{
 
 }
 
-.body1{
+.body1{ 
   text-align: center;
   background-image: url("../assets/spaceship.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
 
+}
+
+/*This is for gp.html, this will be one of the planets battlefield.*/
+.body2{
+  background-image: url("../assets/gp.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  margin-top: 60px;
+}
+
+.battleField{
+  margin-top: 20px;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.enemyField{
+  border-style: solid;
+  border-width: 5px;
+  border-color: #ff2828;
+  border-radius: 10px;
+  background-color: #08086778;
+  margin-right: 10px;
+}
+
+.playerField{
+  border-style: solid;
+  border-width: 5px;
+  border-color: #28ffc9;
+  border-radius: 10px;
+  background-color: #08086778;
+}
+
+.enemyhpField{
+  border-style: solid;
+  border-width: 5px;
+  border-color: #ff2828;
+  border-radius: 10px;
+  background-color: #08086778;
+  text-align: center;
+}
+.playerhpField{
+  border-style: solid;
+  border-width: 5px;
+  border-color: #28ffc9;
+  border-radius: 10px;
+  margin-right: 10px;
+  background-color: #08086778;
+  text-align: center;
+}
+.userPicture{
+  width: 100%;
+}
+
+.enemyPicture{
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+#enemyhp, #playerhp {
+  background-color: azure;
+}
+
+h3{
+  color: antiquewhite;
+}
+
+input {
+  overflow: visible;
+  width: -webkit-fill-available;
 }
