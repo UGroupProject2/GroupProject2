@@ -1,4 +1,19 @@
-form.signup,
-form.login {
-  margin-top: 50px;
+h1{
+  text-align: center;
+  font-family: roboto;
+}
+
+.mainmenu{
+  align-content: center;
+  display: inline-block;
+
+}
+
+.body1{
+  text-align: center;
+  background-image: url("../assets/spaceship.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+
 }
