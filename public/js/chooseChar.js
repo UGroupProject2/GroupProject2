@@ -1,12 +1,13 @@
 $(document).ready(function() {
   var loggedUserID;
+  var chosenChar;
     
 
   function getUser(){
     $.get("/api/user_data").then(function(data) {
       console.log(data.id);
       loggedUserID = data.id;
-      getPosts(loggedUserID);
+      getChars(loggedUserID);
     });
   }
 
@@ -17,7 +18,7 @@ $(document).ready(function() {
     
   };
 
-  function getPosts(loggedUser) { 
+  function getChars(loggedUser) { 
     
     var user = "/?user_id=" + loggedUser;
 
@@ -31,9 +32,20 @@ $(document).ready(function() {
       }
       else {
 
+        
+
         var string = "";
         for(var i =0; i<chars.length; i++){
-          string += "<button type='button' class='btn btn-primary'>" + chars[i].name + "</button>";
+
+         /*  $.get("/api/char_data").then(function(data) {
+            console.log(data.id);
+            chosenChar = data.id;
+          }); */
+
+
+          var chosenChar = 5;
+
+          string += "<button type='button' class='btn btn-basic'><a href='planet_select/:" + chosenChar + "'>" + chars[i].name + "</a></button>";
         };        
         
         populateList(string);
