@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
     agility: DataTypes.INTEGER,
     
   });
-  
+
   Character.associate = function(models) {
     // Associating character with user
     // When a user is deleted, also delete any associated chars
@@ -21,6 +21,6 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
   };
-  
+
   return Character;
 };
