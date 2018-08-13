@@ -98,10 +98,12 @@ img.avatar {
 
 .new_user {
   padding: 16px;
-    border-style: inset;
-    border-width: 4px;
-    border-color: burlywood;
+  background-color: #dfdfdf;
+  border-style: inset;
+  border-width: 4px;
+  border-color: #f3335c;
 }
+
 
 span.psw {
   float: right;
@@ -303,6 +305,14 @@ h3{
   background-image: none;
   border-color: #ffffff;
   
+}
+
+.newUserText{
+  padding: 10px;
+}
+
+#signUpButton{
+  background-color: #1abc25b5;
 }
 
 /* .tooltip {
