@@ -43,7 +43,8 @@ module.exports = function(app) {
       dexterity: req.body.dexterity,
       agility: req.body.agility,
       wisdom: req.body.wisdom,
-      health: req.body.health
+      health: req.body.health,
+      UserId: req.body.UserId
     }).then(function() {
       res.redirect(307, "/api/login");
     }).catch(function(err) {
