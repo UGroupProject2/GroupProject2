@@ -27,7 +27,7 @@
             <div class="col-sm-6 colnumber2">
                 <div class="character_name">
                     <h3>Character Name</h3>
-                    <div id="character_input" placeholder="Character Name"></div>
+                    <input id="character_name"></input>
                 </div>
                 <div class="experiencepoints">
                     <h3>Attribute Points</h3>
@@ -77,11 +77,26 @@
                     </div>
                 </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                    <h3>Vitality</h3>
+                    <div id="countervit"></div>
+                    <div class="button_group">
+                        <button id="subtractvit">-1</button>
+                        <button id="resetvit">Reset</button>
+                        <button id="addvit">+1</button>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    
+                </div>
+                    </div>
                 </div>
 
             </div>
 
-            <button>Create Character</button>
+            <button id="characterButton">Create Character</button>
         </div>
     </div>
 <script src="../js/character.js">
