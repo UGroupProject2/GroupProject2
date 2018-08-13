@@ -20,7 +20,7 @@ h1{
 
 /*This is for gp.html, this will be one of the planets battlefield.*/
 .body2{
-  background-image: url("../assets/gp.jpg");
+  background-image: url("https://orig00.deviantart.net/662b/f/2014/296/0/3/cyberpunk_cityscape_by_klauspillon-d83vjqq.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
@@ -105,4 +105,14 @@ h3{
 input {
   overflow: visible;
   width: -webkit-fill-available;
+}
+
+#message{
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  border-color: #28a2ff;
+  padding: 50px;
+  margin-top: 14px;
+  background-color: #08086778; 
 }
