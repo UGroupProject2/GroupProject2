@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
   var Character = sequelize.define("Character", {
-    // Giving the Author model a name of type STRING
-    name: DataTypes.STRING,
+    // Giving the character model a name of type STRING
+    name: DataTypes.STRING, 
     class: DataTypes.STRING,
     gender: DataTypes.STRING,
     attack: DataTypes.INTEGER,
@@ -9,17 +9,13 @@ module.exports = function(sequelize, DataTypes) {
     wisdom: DataTypes.INTEGER,
     dexterity: DataTypes.INTEGER,
     agility: DataTypes.INTEGER,
-    userId: {
-      type: DataTypes.INTEGER,
-      references: "User",
-      referencesKey: "id"
-    }
+    
   });
 
   Character.associate = function(models) {
-    // Associating Author with Posts
-    // When an Author is deleted, also delete any associated Posts
-    Character.sequelieBelongsTo(models.User, {
+    // Associating character with user
+    // When a user is deleted, also delete any associated chars
+    Character.belongsTo(models.User, {
       foreignKey: {
         allowNull: false
       }
