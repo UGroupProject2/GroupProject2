@@ -7,9 +7,11 @@ var basename = path.basename(module.filename);
 var env = process.env.NODE_ENV || "development";
 var config = require(__dirname + "/../config/config.json")[env];
 var db = {};
+ var mysql = require('mysql');
+var connection;
 
-if (process.env.JAWS_URL){
-  connection = mysql.createConnection(process.env.JAWS_URL);
+if (process.env.JAWSDB_URL){
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
   } else {
     connection = mysql.createConnection({
       host: 'q57yawiwmnaw13d2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
@@ -18,7 +20,7 @@ if (process.env.JAWS_URL){
       database: 'stc7rb4yzb769wwa'
     });
 
-  };
+  }; 
 
 
 if (config.use_env_variable) {
