@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   var easyMonster = {
     name: "Travis",
-    health: "10",
+    health: "14",
     attack: "7",
     agility: "3"
   };
@@ -21,7 +21,7 @@ var hardMonster = {
 
   var character = {
     attack: "5",
-    health: "20",
+    health: "25",
     wisdom: "4",
     dexterity: "4",
     agility: "5"

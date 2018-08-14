@@ -127,6 +127,7 @@ span.psw {
 
 /* Modal Content/Box */
 .modal-content {
+
   background-color: #0a172b;
   margin: 5% auto 15% auto;
   border: 1px solid #004d4d;
@@ -137,6 +138,7 @@ span.psw {
   color: antiquewhite;
   font-family: 'roboto';
   font-size: 15px;
+
 }
 
 /* The Close Button (x) */
