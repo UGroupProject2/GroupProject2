@@ -315,6 +315,18 @@ h3{
   background-color: #1abc25b5;
 }
 
+.planetField{
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 10px;
+  border-color: #f44336;
+  background-color: rgba(17, 45, 85, 0.84);
+  text-align: center;
+}
+
+.mediumPlanetText{
+  text-align: center;
+}
 /* .tooltip {
   position: relative;
   display: inline-block;
