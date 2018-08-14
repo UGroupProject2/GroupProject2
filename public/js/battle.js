@@ -1,10 +1,12 @@
-var easyMonster = {
-  name: "Travis",
-  health: "10",
-  attack: "7",
-  agility: "3"
-};
-var normalMonster = {
+$(document).ready(function() {
+
+  var easyMonster = {
+    name: "Travis",
+    health: "10",
+    attack: "7",
+    agility: "3"
+  };
+  /* var normalMonster = {
   name: "lint",
   health: "15",
   attack: "9",
@@ -15,41 +17,48 @@ var hardMonster = {
   health: "20",
   attack: "10",
   agility: "5"
-};
+}; */
 
-var charecter = {
+  var character = {
     attack: "5",
-    health: "15",
+    health: "20",
     wisdom: "4",
     dexterity: "4",
     agility: "5"
-};
+  };
 
-var playerTurn = false;
-var opponent = easyMonster;
-var clickAttack = $("#attack").click();
-var battle = function() {
- if(charecter.agility > opponent.agility ){
-  playerTurn = true;}
+  var opponent = easyMonster;
 
-  if(playerTurn){
-      while(opponent.health > 0){
-      if(clickAttack){
-          opponent.health - charecter.attack;
-        
+  var battle = function() {
+
+    $("#playerhp").text(character.health);
+    $("#enemyhp").text(opponent.health);
+
+    $("#attack").click(function(event) {
+      event.preventDefault();
+
+      if(character.health > 0){
+        opponent.health = opponent.health - character.attack;
+        character.health = character.health - opponent.attack;
+        $("#playerhp").text(character.health);
+        $("#enemyhp").text(opponent.health);
+        $("#message").text("You attacked for " + character.attack + " but were hit back for " + opponent.attack + " damage.");
       }
-    }
-  }
 
-  elseif(!playerTurn){
-     //enemy turn
-    while(charecter.health > 0){
-    charecter.health = charecter.health - opponent.attack;
-        playerTurn = true;
+      if(opponent.health < 0){
+        $("#playerhp").text(character.health);
+        $("#enemyhp").text("DEAD!");
+      }
 
-    }
-  }
-  
+      if(character.health < 0){
+        $("#playerhp").text("YOU ARE DEAD!");
+        $("#enemyhp").text(opponent.health);
+      }
 
-}
+    });
+  };
+
+  battle();
+
+});
 
