@@ -33,10 +33,10 @@ module.exports = function(app) {
       }
       
     }).then(function(dbPost) {
-      res.json(dbPost);
+      /* res.json(dbPost); */
     });
 
-    res.sendFile(path.join(__dirname, "../html/choosePlanet.html"));
+    res.sendFile(path.join(__dirname, "../public/html/choosePlanet.html"));
   });
 
 
