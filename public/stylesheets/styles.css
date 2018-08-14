@@ -127,11 +127,17 @@ span.psw {
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: antiquewhite;
-  font-size: 25px;
-    margin: 5% auto 15% auto;
-    border: 1px solid #004d4d;
-    width: 40%;
+
+  background-color: #0a172b;
+  margin: 5% auto 15% auto;
+  border: 1px solid #004d4d;
+  width: 40%;
+}
+
+#list{
+  color: antiquewhite;
+  font-family: 'roboto';
+  font-size: 15px;
 
 }
 
@@ -143,6 +149,7 @@ span.psw {
   color: #000;
   font-size: 35px;
   font-weight: bold;
+
 }
 
 .close:hover,
