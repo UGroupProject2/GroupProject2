@@ -36,7 +36,7 @@ module.exports = function(app) {
       res.json(dbPost);
     });
 
-    res.sendFile(path.join(__dirname, "../public/html/choosePlanet.html"));
+    res.sendFile(path.join(__dirname, "../html/choosePlanet.html"));
   });
 
 
